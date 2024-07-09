@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Frontend</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Frontend.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="background-color: white; color: white">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/994/994928.png" alt="Logo">
+                <span>EasyEquities</span>
+            </div>
+            <ul class="nav-links">
+                <li><a asp-controller="Home" asp-action="Index">Get Started</a></li>
+                <li><a asp-controller="Invest" asp-action="Index">Invest</a></li>
+                <li><a asp-controller="EasyVSTRHub" asp-action="Index">EasyVSTR Hub</a></li>
+                <li><a asp-controller="EasyApps" asp-action="Index">EasyApps</a></li>
+                <li><a asp-controller="About" asp-action="Index">About</a></li>
+                <li><a asp-controller="Support" asp-action="Index">Support</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a class="login" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="register" asp-controller="Account" asp-action="Register">Register</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
