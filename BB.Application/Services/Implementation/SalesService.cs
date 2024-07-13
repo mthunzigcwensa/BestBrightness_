@@ -1,13 +1,13 @@
-﻿using BestBrightness.Application.Common.Interfaces;
-using BestBrightness.Application.Services.Interfaces;
-using BestBrightness.Domain.Entities;
+﻿using BB.Application.Common.Interfaces;
+using BB.Application.Services.Interfaces;
+using BB.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BestBrightness.Application.Services.Implementation
+namespace BB.Application.Services.Implementation
 {
     public class SalesService : ISalesService
     {
